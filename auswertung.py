@@ -40,11 +40,11 @@ p.savefig('./abb/abb3.png')'''
 
 print("saege")
 for i in range(1,11):
-    print("Koeffizient b%i: %s " % (i,str(  -2*(-1)**i/(pi*i)/(0.6366))))
+    print("Koeffizient b%i: %s " % (i,str( -2*(-1)**i/(pi*i)/( -2*(-1)**1/(pi*1)))))
 
-    print("triangle")
+print("triangle")
 for i in range(1,11):
-    print("Koeffizient a%i: %s "  %(i,   str(2*(1-(-1)**i)/(pi**2*i**2)*0.6/0.40528))) 
+    print("Koeffizient a%i: %s "  %(i,   str(2*(1-(-1)**i)/(pi**2*i**2)))) 
 print("rechteck")
 for i in range(1,11):
-    print("Koeffizient b.%i: %s " % (i,  str(-2*(-1)**i/(pi*i)*0.6/0.636619)))
+    print("Koeffizient b.%i: %s " % (i,  str(2*(1-(-1)**i)/(pi*i)/(2*(1-(-1)**1)/(pi*1)))))

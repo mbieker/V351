@@ -67,8 +67,8 @@ berechnet. Da hier aber theoretisch ein unendlich langes Signal benötigt wird (
 \section{Vorbereitung und Durchf\"{u}hrung}
 \subsection{Berechnung der Fouerierkoeffizienten}
 Im Folgenden sollen die Fourierkomponenten von 3 verschiedenen Funktionen bestimmt werden. 
-\paragraph{Dreicksfuntkion}
-Die Dreiecksfuntkion ist definiert als
+\paragraph{Dreicksfunktion}
+Die Dreiecksfunktion ist definiert als
 \begin{equation}
 f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R}, f(t) = 1 - \left|\frac{2t}{T}\right|
 \end{equation}
@@ -106,7 +106,7 @@ b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\rig
 \frac{2}{\pi n} & n \mbox{ ungerade}
 \end{cases}
 \end{align}
-\paragraph{Rechteckfuntion} Zur einfacheren Berechnung der Fourier-Koeffizienten wird diese Funtkion als
+\paragraph{Rechteckfunktion} Zur einfacheren Berechnung der Fourier-Koeffizienten wird diese Funktion als
 \begin{equation}
 f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R},\,f(t) = \begin{cases}
 -1 & \mbox{f\"ur } n < 0 \\
@@ -133,7 +133,7 @@ gegeben.
 In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen mit dem digitalen Speicheroszilloskop untersucht werden. Dafür wird das Signal direkt in das Oszilloskop gespeist. Die "Math"-Funktion führt dann für ein einstellbares Zeitintervall eine Fouriertransformation durch. Die ersten neun von Null verschiedenen Maxima sollen dann abgelesen werden, um diese mit den theoretischen, im Voraus berechneten, zu vergleichen.
 \subsection{Fourier-Synthese}
 
-In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle \ref{koeff}.
+In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle 1.
 
 \section{Ergebnis}
 
@@ -164,7 +164,89 @@ n & Dreick [$a_n]$ & S\"agezahn [$b_n$] & Rechteck $[b_n]$ \\
 9 & 0.005 & 0.071 & 0.141\\
 \hline
 \end{tabular}
-\label{koeff}
+\label{table1}
 \caption{Fourier-Koeffizienten der verschiedenen Schwingungen}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c||c|c||c|c||c|c|}
+\hline
+n & \multicolumn{2}{c||}{Dreiecksfunktion} & \multicolumn{2}{c||}{Sägezahnfunktion} & \multicolumn{2}{c|}{Rechteckfunktion} \\
+ & Amplitude [V] & $\Delta \varphi\,[^\circ]$ & Amplitude [V] & $\Delta \varphi\,[^\circ]$ & Amplitude [V] & $\Delta \varphi\,[^\circ]$ \\
+\hline
+1 & 0.6 & 0 & 0.6 & 0 & 0.6 & 0\\
+2 & 0 &  & 0.3 & 180 & 0& \\
+3 & 0.067 & 0 & 0.2 & 0 & 0.2 & 0\\
+4 & 0 &  & 0.15 & 180 & 0 & \\
+5 & 0.024 & 0 & 0.12 & 0 & 0.12 & 0\\
+6 & 0 &  & 0.1 & 180 & 0 & \\
+7 & 0.012 & 0 & 0.086 & 0 & 0.086 & 0\\
+8 & 0 &  & 0.075 & 180 & 0 & \\
+9 & 0.007 & 0 & 0.067 & 0 & 0.067 & 0\\
+\hline
+\end{tabular}
+\label{settings}
+\caption{Einstellungen des Oberwellengenerators für die jeweiligen Schwingungen}
+\end{table}
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+n & $a_n [V]$ & $(\frac{a_n}{a_1})_{exp}$ & $(\frac{a_n}{a_14})_{th}$ & rel. Abweichung\\
+\hline
+1&5.6 & 1.0 & 1.0 & 0.0\\
+3&0.656 & 0.117 & 0.111 & 0.051\\
+5&0.184 & 0.033 & 0.04 & -0.212\\
+7&0.112 & 0.02 & 0.02 & 0.0\\
+9&0.04 & 0.007 & 0.012 & -0.714\\
+\hline
+\end{tabular}
+\label{hut}
+\caption{Ergebnisse der Fourieranalyse für die Dreicksfunktion}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+n & $b_n [V]$ & $(\frac{b_n}{a_1})_{exp}$ & $(\frac{b_n}{a_1})_{th}$ & rel. Abweichung\\
+\hline
+1&2.94 & 1.0 & 1.0 & 0.0\\
+2&2.34 & 0.796 & 0.5 & 0.372\\
+3&1.02 & 0.347 & 0.333 & 0.04\\
+4&1.16 & 0.395 & 0.25 & 0.367\\
+5&0.07 & 0.022 & 0.2 & -8.091\\
+6&0.80 & 0.272 & 0.167 & 0.386\\
+7&0.52 & 0.177 & 0.143 & 0.192\\
+8&0.60 & 0.204 & 0.125 & 0.387\\
+9&0.46 & 0.155 & 0.111 & 0.284\\
+\hline
+\end{tabular}
+
+\label{saw}
+\caption{Ergebnisse der Fourieranalyse für die Sägezahnfunktion}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+
+n & $b_n [V]$ & $(\frac{b_n}{a_1})_{exp}$ & $(\frac{b_n}{a_1})_{th}$ & rel. Abweichung\\
+\hline
+1&6.08 & 1.0 & 1.0 & 0.0\\
+3&2.08 & 0.342 & 0.333 & 0.026\\
+5&1.32 & 0.217 & 0.2 & 0.078\\
+7&1.04 & 0.171 & 0.143 & 0.164\\
+9&0.88 & 0.145 & 0.111 & 0.234\\
+11&0.78 & 0.128 & 0.091 & 0.289\\
+13&0.72 & 0.118 & 0.077 & 0.347\\
+15&0.648 & 0.107 & 0.067 & 0.374\\
+17&0.608 & 0.1 & 0.059 & 0.41\\
+\hline
+\end{tabular}
+\label{rect}
+\caption{Ergebnisse der Fourieranalyse für die Rechteckfunktion}
 \end{table}
 \end{document}
