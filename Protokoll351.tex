@@ -63,7 +63,56 @@ g(\nu)=\int_{-\infty}^\infty f(t)e^{i\nu t}dt
 \label{trafo}
 \end{equation}
 berechnet. Da hier aber theoretisch ein unendlich langes Signal benötigt wird (siehe Integration von $-\infty$ bis $\infty$), kommt es zu Abweichungen: $g(\nu)$ wird stetig und integrierbar, die "Linien" des Spektrums werden breiter.
-\section{Aufbau und Durchf\"{u}hrung}
+
+\section{Vorbereitung und Durchf\"{u}hrung}
+\subsection{Berechnung der Fouerierkoeffizienten}
+Im Folgenden sollen die Fourierkomponenten von 3 verschiedenen Funktionen bestimmt werden. 
+\paragraph{Dreicksfuntkion}
+Die Dreiecksfuntkion ist definiert als
+\begin{equation}
+f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R}, f(t) = 1 - \left|\frac{2t}{T}\right|
+\end{equation}
+Abbildung \ref{org_hut} zeigt die periodische Fortsetzung dieser Funktion. Da es sich bei dieser Abbildung um eine gerade Funktion handelt, sind alle Fourierkoeffizienten $b_n$ gleich null. Der Koeffizient $a_0$ betr\"agt nach Formel \ref{an}
+\begin{equation} 
+a_0 =\frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}2}\!f(t)\,\mathrm dt= \frac4T \int_{0}^{\frac{T}2}\!1-\frac{2t}{T}\,\mathrm dt= 1.
+\end{equation}
+F\"ur den Fall $n \neq 0$ folgt analog:
+\begin{align}
+a_n =\frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}2}\!f(t)cos\left(\frac{n2\pi t}{T}\right) \,\mathrm dt = \frac{4}{T} \int_0^\frac{T}2\!\left(1-\frac{2t}{T}\right)cos\left(\frac{n2\pi t}{T}\right)\,\mathrm dt \\= \frac{2 (1-(-1)^n)}{\pi^2n^2} = \begin{cases}
+0 & n\mbox{ gerade} \\ \frac{4}{\pi^2n^2} & n\mbox{ ungerade}
+\end{cases}
+\end{align} 
+\paragraph{S\"agezahnfunktion} Diese Abbildung ist durch
+\begin{equation}
+f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R}, f(t) = t
+\end{equation}
+definiert. In Abbildung \ref{org_saw} ist die periodische Fortsetzung dieser Funktion zu sehen. Da es sich bei dieser Funktion um eine ungerade Abbildung handelt, sind alle Koeffizienten $a_n$ gleich null. F\"ur die $b_n$ gilt nach Formel \ref{bn}:
+\begin{align}
+b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt = \frac 2 T \int_{-\frac T 2}^\frac T 2\!t\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt =\frac{ -2(-1)^n}{\pi n}\\=
+\begin{cases}
+-\frac{2}{\pi n} & n \mbox{ gerade}  \\
+\frac{2}{\pi n} & n \mbox{ ungerade}
+\end{cases}
+\end{align}
+\paragraph{Rechteckfuntion} Zur einfacheren Berechnung der Fourier-Koeffizienten wird diese Funtkion als
+\begin{equation}
+f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R},\,f(t) = \begin{cases}
+-1 & \mbox{f\"ur } n < 0 \\
+1  & \mbox{f\"ur } n \geq 0
+\end{cases}
+\end{equation}
+definiert. Da es sich auch bei dieser Funktion um eine ungerade Abbildung handelt sind analog zu oben alle $a_n$ gleich null. Des Weiteren sind die $b_n$ durch
+\begin{align}
+b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt = \frac 2 T \left[ \int_{-\frac T 2}^0\!sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt - \int_0^{\frac T 2}\!sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt \right] \\
+= \frac{2 (1- (-1)^n)}{n \pi} =
+\begin{cases}
+0 & n \mbox{ gerade}\\
+\frac4{n\pi} & n \mbox{ ungerade}
+\end{cases} 
+\end{align}
+gegeben.
+\subsection{Fourier-Analyse}
+\subsection{Fourier-Synthese}
 \section{Auswertung}
 
 \section{Diskussion}
