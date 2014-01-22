@@ -14,11 +14,11 @@
 adieresis={ä},
 germandbls={ß},
 }
-\title{\textbf{Versuch V351: Fourier Analyse und Synthese}}
+\title{\textbf{Versuch V351: Fourier-Analyse und Synthese}}
 \author{Martin Bieker\\
 		Julian Surmann\\
 		\\
-		Durchgef\"{u}hrt am .01.2014\\
+		Durchgef\"{u}hrt am 16.01.2014\\
 		Tu Dortmund}
 \date{}
 \usepackage{graphicx}
@@ -33,8 +33,36 @@ germandbls={ß},
 
 
 \section{Einleitung}
-
+In der Physik werden manchmal periodische Signale gemessen, zum Beispiel Töne eines Musikinstruments. Mit Hilfe der Fourier-Analyse lässt sich dann ein Frequenzspektrum erstellen. An diesem kann man am Beispiel des Musikinstrumentes die Grund- und Obertöne sowie deren Amplituden bestimmen.
+In diesem Versuch sollen zunächst periodische Signale mit dem digitalen Oszilloskop untersucht werden und anschließend eigene Signale erzeugt werden, die aus vorher berechneten Grund- und Oberschwingungen bestehen.
 \section{Theorie}
+\subsection{Fourier-Analyse}
+Eine gleichmäßig konvergierende Reihe
+\begin{equation}
+\frac{a_0}{2}+\sum_{n=1}^\infty \left(a_ncos\left(\frac{2\pi nt}{T}\right)+b_nsin\left(\frac{2\pi nt}{T}\right)\right)
+\label{formel1}
+\end{equation}
+stellt eine periodische Funktion $f(t)$ dar. Die Periodendauer beträgt T. Die Faktoren $a_n$ und $b_n$ werden errechnet mit
+\begin{itemize}
+\item $a_n=\frac{2}{T}\int\limits_{0}^{T}f(t)cos\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,... $
+\item $b_n=\frac{2}{T}\int\limits_{0}^{T}f(t)sin\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,... $
+\end{itemize}
+Die Grundfrequenz der untersuchten Funktion ist $v=\frac{1}{T}$, die Oberschwingungen haben als Frequenz in der Regel ganzzahlige Vielfache von $v$.
+Manchmal ist es möglich, Vereinfachungen anzuwenden. So könnte die zu analysierende Funktion gerade oder ungerade sein. Dadurch ergeben sich folgende Zustände:
+\begin{equation}
+gerade: f(t)=f(-t) \Rightarrow b_n=0
+\end{equation}
+\begin{equation}
+ungerade: f(-t)=-f(t) \Rightarrow a_n=0
+\end{equation}
+Manchmal ist es auch möglich, eine Funktion in gerade und ungerade Teile aufzuteilen. In Abbildung ??? sind die Amplituden der Teilschwingungen gegen die Frequenzen aufgetragen. Bei periodischen Funktionen handelt es sich immer um ein Linienspektrum.
+\subsection{Fourier-Transformation}
+Die Fourier-Transformation ist in der Lage, ein vollständiges Frequenzspektrum einer Funktion zu errechnen. Diese Transformation funktioniert auch mit einer nicht periodischen Funktion. Das (kontinuierliche) Frequenzspektrum einer Funktion f(t) wird mit
+\begin{equation}
+g(\nu)=\int_{-\infty}^\infty f(t)e^{i\nu t}dt
+\label{trafo}
+\end{equation}
+berechnet. Da hier aber theoretisch ein unendlich langes Signal benötigt wird (siehe Integration von $-\infty$ bis $\infty$), kommt es zu Abweichungen: $g(\nu)$ wird stetig und integrierbar, die "Linien" des Spektrums werden breiter.
 
 \section{Vorbereitung und Durchf\"{u}hrung}
 \subsection{Berechnung der Fouerierkoeffizienten}
@@ -102,10 +130,12 @@ b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\rig
 \end{align}
 gegeben.
 \subsection{Fourier-Analyse}
+In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen mit dem digitalen Speicheroszilloskop untersucht werden. Dafür wird das Signal direkt in das Oszilloskop gespeist. Die "Math"-Funktion führt dann für ein einstellbares Zeitintervall eine Fouriertransformation durch. Die ersten neun von Null verschiedenen Maxima sollen dann abgelesen werden, um diese mit den theoretischen, im Voraus berechneten, zu vergleichen.
 \subsection{Fourier-Synthese}
+
 In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle \ref{koeff}.
 
-\section{Auswertung}
+\section{Ergebnis}
 
 \section{Diskussion}
 \section{Abbildungsverzeichnis}
