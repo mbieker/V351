@@ -56,3 +56,7 @@ ylim(-1.1,1.1)
 xlabel(r'$\frac{t}{T}$')
 ylabel(r'Amplitude')
 savefig('./abb/Abb3.png')
+
+
+
+
