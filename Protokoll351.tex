@@ -72,7 +72,13 @@ Die Dreiecksfuntkion ist definiert als
 \begin{equation}
 f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R}, f(t) = 1 - \left|\frac{2t}{T}\right|
 \end{equation}
-Abbildung \ref{org_hut} zeigt die periodische Fortsetzung dieser Funktion. Da es sich bei dieser Abbildung um eine gerade Funktion handelt, sind alle Fourierkoeffizienten $b_n$ gleich null. Der Koeffizient $a_0$ betr\"agt nach Formel \ref{an}
+Abbildung \ref{org_hut} zeigt die periodische Fortsetzung dieser Funktion.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{abb/Abb2.png}
+\caption{Periodische Fortsetzung der Dreicksfunktion}
+\label{org_hut}
+\end{figure} Da es sich bei dieser Abbildung um eine gerade Funktion handelt, sind alle Fourierkoeffizienten $b_n$ gleich null. Der Koeffizient $a_0$ betr\"agt nach Formel \ref{an}
 \begin{equation} 
 a_0 =\frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}2}\!f(t)\,\mathrm dt= \frac4T \int_{0}^{\frac{T}2}\!1-\frac{2t}{T}\,\mathrm dt= 1.
 \end{equation}
@@ -86,7 +92,13 @@ a_n =\frac{2}{T} \int_{-\frac{T}{2}}^{\frac{T}2}\!f(t)cos\left(\frac{n2\pi t}{T}
 \begin{equation}
 f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R}, f(t) = t
 \end{equation}
-definiert. In Abbildung \ref{org_saw} ist die periodische Fortsetzung dieser Funktion zu sehen. Da es sich bei dieser Funktion um eine ungerade Abbildung handelt, sind alle Koeffizienten $a_n$ gleich null. F\"ur die $b_n$ gilt nach Formel \ref{bn}:
+definiert. In Abbildung \ref{org_saw} ist die periodische Fortsetzung dieser Funktion zu sehen.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{abb/Abb1.png}
+\caption{Periodische Fortsetzung der S\"agezahnfunktion}
+\label{org_saw}
+\end{figure} Da es sich bei dieser Funktion um eine ungerade Abbildung handelt, sind alle Koeffizienten $a_n$ gleich null. F\"ur die $b_n$ gilt nach Formel \ref{bn}:
 \begin{align}
 b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt = \frac 2 T \int_{-\frac T 2}^\frac T 2\!t\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt =\frac{ -2(-1)^n}{\pi n}\\=
 \begin{cases}
@@ -101,7 +113,13 @@ f \colon  \left[-\frac{T}{2}, \frac{T}{2}\right]\to \mathbb{R},\,f(t) = \begin{c
 1  & \mbox{f\"ur } n \geq 0
 \end{cases}
 \end{equation}
-definiert. Da es sich auch bei dieser Funktion um eine ungerade Abbildung handelt sind analog zu oben alle $a_n$ gleich null. Des Weiteren sind die $b_n$ durch
+definiert. Die Abbildung \ref{org_rect} zeigt die periodische Fortsetzung dieser Funktion. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.7]{abb/Abb3.png}
+\caption{Periodische Fortsetzung der Rechteckfunktion}
+\label{org_rect}
+\end{figure}Da es sich auch bei dieser Funktion um eine ungerade Abbildung handelt sind analog zu oben alle $a_n$ gleich null. Des Weiteren sind die $b_n$ durch
 \begin{align}
 b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt = \frac 2 T \left[ \int_{-\frac T 2}^0\!sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt - \int_0^{\frac T 2}\!sin\left(\frac{n2\pi t}{T}\right)\,\mathrm dt \right] \\
 = \frac{2 (1- (-1)^n)}{n \pi} =
