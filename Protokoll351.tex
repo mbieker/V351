@@ -2,6 +2,7 @@
 %Gummi|061|=)
 \usepackage{amsmath}
 \usepackage{a4wide}
+\usepackage{url}
 \usepackage{amsthm}
 \usepackage{amsbsy}
 \usepackage{amssymb}
@@ -146,7 +147,7 @@ In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen
 
 \subsection{Fourier-Synthese}
 
-In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at, welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergebnisse finden sich in Tabelle 1. Danach werden die richtigen Phasenbeziehungen zwischen den Oberwellen und der Grundschwingung hergestellt. Dazu wird je eine Oberwelle auf Kanal 1 und die Grundschwingung auf den zweiten Kanal eines Oszilloskops gegeben. Auf dieses Weise kann mit Hilfe von Lissajous-Figuren die richtige Phasenbeziehung zwischen den Schwingungen hergestellt werden. Die negativen Koeffizienten der S\"agezahnfunktion werden dabei durch eine Phasenverschiebung von $180 ^\circ$ realisiert. 
+In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourierkomponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at, welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergebnisse finden sich in Tabelle 1. Danach werden die richtigen Phasenbeziehungen zwischen den Oberwellen und der Grundschwingung hergestellt. Dazu wird je eine Oberwelle auf Kanal 1 und die Grundschwingung auf den zweiten Kanal eines Oszilloskops gegeben. Auf dieses Weise kann mit Hilfe von Lissajous-Figuren die richtige Phasenbeziehung zwischen den Schwingungen hergestellt werden. Die negativen Koeffizienten der S\"agezahnfunktion werden dabei durch eine Phasenverschiebung von $180 ^\circ$ realisiert. 
 
 \noindent
 Die Amplitudenverh\"altnisse der einzelnen Komponenten sollen so gew\"ahlt werden, dass die Grundschwingung jeweils die gr\"o\ss te Amplitude des Oberwellengenerators ($0.6\,$V) aufweist. Dazu werden die Fourier-Koeffizienten entsprechend skaliert. Alle Einstellungen am Generator, die zur Synthese der einzelnen Funktionen n\"otig sind, befinden sich zusammengefasst in Tabelle 2. Nachdem der Oberwellengenerator entsprechend eingestellt wurde, kann die Summenschwingung auf dem Oszilloskop betrachtet werden.
@@ -192,14 +193,14 @@ Abbildung \ref{saw_1} zeigt die Summenschwingung nach dem Einschalten der Oberwe
 \caption{Oszillogramm  der Summenschwingung bis $n = 9$}
 \label{saw_1}
 \end{figure}
-Das Oszillogramm in Abbildung \ref{saw_2} zeigt die Summenschwingung, nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. In dieser Grafik ist das Gibbsche Phenom\"an an der Sprungstellen deutlich zu erkennen.
+Das Oszillogramm in Abbildung \ref{saw_2} zeigt die Summenschwingung, nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. In dieser Grafik ist das Gibbsche Phänomen an der Sprungstellen deutlich zu erkennen.
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.8]{Screenshots/saw_2.png}
 \caption{Oszillogramm  der Summenschwingung bis $n = 5$}
 \label{saw_2}
 \end{figure}
-\paragraph{Rechteckfunkktion}
+\paragraph{Rechteckfunktion}
 Abbildung \ref{rect_1} zeigt die Summenschwingung nach dem Einschalten der Oberwellen bis einschlie\ss lich $ n = 5$. 
 \begin{figure}[htp]
 \centering
@@ -207,7 +208,7 @@ Abbildung \ref{rect_1} zeigt die Summenschwingung nach dem Einschalten der Oberw
 \caption{Oszillogramm  der Summenschwingung bis $n = 5$}
 \label{rect_1}
 \end{figure}
-Es ist erkennbar, dass sich die Summenschwingung sich  der Zielfunktion an\"ahert. Das Oszillogramm in Abbildung \ref{rect_2} zeigt die Summenschwingung nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. Auch bei dieser Funktion tritt ein \"Uberschwingen an den Unstetigkeitsstellen auf.
+Es ist erkennbar, dass sich die Summenschwingung der Zielfunktion an\"ahert. Das Oszillogramm in Abbildung \ref{rect_2} zeigt die Summenschwingung nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. Auch bei dieser Funktion tritt ein \"Uberschwingen an den Unstetigkeitsstellen auf.
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.8]{Screenshots/rec_2.png}
@@ -215,10 +216,12 @@ Es ist erkennbar, dass sich die Summenschwingung sich  der Zielfunktion an\"aher
 \label{rect_2}
 \end{figure}
 \section{Diskussion}
+Die Fourier-Analyse mit dem Oszilloskop hat gut funktioniert. Die Maxima waren gut ablesbar. Allerdings waren die Amplituden bei der Dreiecks-Funktion nur bis zum fünften Peak ablesbar, da die Amplituden zu stark abfielen. Die experimentell ermittelten Amplituden haben leider eine Abweichung von bis zu 39 \% zu den theoretischen Werten. Dies lässt sich nur teilweise mit der Messungenauigkeit erklären. Die Fourier-Synthese hat gut funktioniert.
 \section{Abbildungsverzeichnis}
-\begin{itemize}
-\item $[1]$: Entnommen der Praktikumsanleitung "Fourier-Analyse und Synthese" der TU Dortmund, Download am 18.01.14 unter http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V351.pdf
-\end{itemize}
+\begin{enumerate}[{[}1{]}]
+\item Entnommen der Praktikumsanleitung "Fourier-Analyse und Synthese" der TU Dortmund. Download am 18.01.14 unter:\\
+ \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V351.pdf}
+\end{enumerate}
 \section{Anhang}
 \begin{itemize}
 \item Tabellen
