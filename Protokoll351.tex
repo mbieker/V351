@@ -43,14 +43,10 @@ Eine gleichmäßig konvergierende Reihe
 \label{formel1}
 \end{equation}
 stellt eine periodische Funktion $f(t)$ dar. Die Periodendauer beträgt T. Die Faktoren $a_n$ und $b_n$ werden errechnet mit
-\begin{equation}
-a_n=\frac{2}{T}\int\limits_{0}^{T}f(t)cos\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,...
-\label{an}
-\end{equation}
-\begin{equation}
-b_n=\frac{2}{T}\int\limits_{0}^{T}f(t)sin\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,...
-\label{bn}
-\end{equation}
+\begin{itemize}
+\item $a_n=\frac{2}{T}\int\limits_{0}^{T}f(t)cos\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,... $
+\item $b_n=\frac{2}{T}\int\limits_{0}^{T}f(t)sin\left(\frac{2\pi nt}{T}\right)dt , n = 1,2,3,... $
+\end{itemize}
 Die Grundfrequenz der untersuchten Funktion ist $v=\frac{1}{T}$, die Oberschwingungen haben als Frequenz in der Regel ganzzahlige Vielfache von $v$.
 Manchmal ist es möglich, Vereinfachungen anzuwenden. So könnte die zu analysierende Funktion gerade oder ungerade sein. Dadurch ergeben sich folgende Zustände:
 \begin{equation}
@@ -134,7 +130,7 @@ b_n = \frac 2 T\int_{-\frac T 2}^\frac T 2\!f(x)\,sin\left(\frac{n2\pi t}{T}\rig
 \end{align}
 gegeben.
 \subsection{Fourier-Analyse}
-In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen mit dem digitalen Speicheroszilloskop untersucht werden. Dafür wird das Signal direkt in das Oszilloskop gespeist. Die "Math"-Funktion führt dann für ein einstellbares Zeitintervall eine Fouriertransformation durch. Dabei ist zu beachten, dass das Messintervall möglichst lang ist, um das Integral mit unendlichen Grenzen möglichst gut anzunähern. Die ersten neun von Null verschiedenen Maxima sollen dann abgelesen werden, um diese mit den theoretischen, im Voraus berechneten, zu vergleichen. Die vom Oszilloskop erstellte Analyse der Rechteckspannung ist als Beispiel in Abbildung ??? zu sehen. Die Tabellen \ref{hut} bis \ref{rect} zeigen die abgelesenen Amplituden sowie ein Vergleich zu den theoretisch berechneten Werten. Bei den Werten der Dreiecksfunktion sind die Amplituden sehr schnell sehr stark abgefallen, sodass ein genaues Ablesen der Werte deutlich erschwert wurde. Die rel. Abweichungen zeigen dies deutlich. Auch bei den anderen Funktionen liegt die Abweichung der experimentellen zu den theoretischen Werten bei bis zu 39\%.
+In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen mit dem digitalen Speicheroszilloskop untersucht werden. Dafür wird das Signal direkt in das Oszilloskop gespeist. Die "Math"-Funktion führt dann für ein einstellbares Zeitintervall eine Fouriertransformation durch. Die ersten neun von Null verschiedenen Maxima sollen dann abgelesen werden, um diese mit den theoretischen, im Voraus berechneten, zu vergleichen.
 \subsection{Fourier-Synthese}
 
 In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at, welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle 1. Dach werden die richtigen Phasenbeziehungen zwischen den Oberwellen und der Grundschwingung hergestellt. Dazu wird je eine Oberwelle auf Kanal 1 und die Grundschwingung auf den zweiten Kanal eines Oszilloskops gegeben. Auf dieses Weise kann mit Hilfe von Lissajous-Figuren die richtige Phasenbeziehung zwischen den Schwingungen hergestellt werden. Die negativen Koeffizienten der S\"agezahnfunktion werden dabei durch eine Phasenverschiebung von $180 ^\circ$ realisiert. 
@@ -144,18 +140,60 @@ Die Amplitudenverh\"altnisse der einzelnen Komponenten sollen so gew\"ahlt werde
 \section{Ergebnis}
 \subsection{Fourier-Analyse}
 \subsection{Fourier-Synthese} 
-\paragraph{Grundschwingung} Die Grundschwingung f\"ur alle betrachteten Funktionen ist eine Sinuswelle mit einer Ampltude von $0.6$V. Diese ist in Abbildung 4 dargestellt.
+\paragraph{Grundschwingung} Die Grundschwingung f\"ur alle betrachteten Funktionen ist eine Sinuswelle mit einer Ampltude von $0.6\,$V. Diese ist in Abbildung 4 dargestellt.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.8]{Screenshots/basic.png}
 \caption{Oszillogramm der Grundschwingung}
 
 \end{figure}
-\paragraph{Dreiecksfunktion}
-\paragraph{}
-
+\paragraph{Dreiecksfunktion} 
+Abbildung \ref{hut_1} zeigt die Summenschwingung nach dem Einschalten der Oberwellen bis einschlie\ss lich $ n = 5$. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/hut_1.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 5$}
+\label{hut_1}
+\end{figure}
+Es ist erkennbar, dass sich die Summenschwingung sich sehr schnell der Dreiecksfunktion an\"ahert. Das Oszillogramm in Abbildung \ref{hut_2} zeigt die Summenschwingung, nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/hut_2.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 9$}
+\label{hut_2}
+\end{figure}
+ 
+\paragraph{S\"agezahnfunktion}
+Abbildung \ref{saw_1} zeigt die Summenschwingung nach dem Einschalten der Oberwellen bis einschlie\ss lich $ n = 5$. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/saw_1.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 9$}
+\label{saw_1}
+\end{figure}
+Das Oszillogramm in Abbildung \ref{saw_2} zeigt die Summenschwingung, nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. In dieser Grafik ist das Gibbsche Phenom\"an an der Sprungstellen deutlich zu erkennen.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/saw_2.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 5$}
+\label{saw_2}
+\end{figure}
+\paragraph{Rechteckfunkktion}
+Abbildung \ref{rect_1} zeigt die Summenschwingung nach dem Einschalten der Oberwellen bis einschlie\ss lich $ n = 5$. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/rect_1.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 5$}
+\label{rect_1}
+\end{figure}
+Es ist erkennbar, dass sich die Summenschwingung sich  der Zielfunktion an\"ahert. Das Oszillogramm in Abbildung \ref{rect_2} zeigt die Summenschwingung nachdem alle verf\"ugbaren Oberwellen eingeschaltet wurden. Auch bei dieser Funktion tritt ein \"Uberschwingen an den Unstetigkeitsstellen auf.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.8]{Screenshots/rec_2.png}
+\caption{Oszillogramm  der Summenschwingung bis $n = 5$}
+\label{rect_2}
+\end{figure}
 \section{Diskussion}
-Die Fourier-Analyse mit dem Oszilloskop hat gut funktioniert. Die Maxima waren gut ablesbar. Allerdings waren die Amplituden bei der EINSETZEN-Funktion nur bis zum EINSETZEN Peak ablesbar, da die Amplituden zu stark abfielen. Auch die Fourier-Synthese hat gut funktioniert
 \section{Abbildungsverzeichnis}
 \section{Anhang}
 \begin{itemize}
@@ -221,7 +259,7 @@ n & $a_n [V]$ & $(\frac{a_n}{a_1})_{exp}$ & $(\frac{a_n}{a_14})_{th}$ & rel. Abw
 \hline
 \end{tabular}
 \label{hut}
-\caption{Ergebnisse der Fourieranalyse für die Dreiecksfunktion}
+\caption{Ergebnisse der Fourieranalyse für die Dreicksfunktion}
 \end{table}
 
 \begin{table}
