@@ -19,7 +19,7 @@ germandbls={ß},
 		Julian Surmann\\
 		\\
 		Durchgef\"{u}hrt am 16.01.2014\\
-		Tu Dortmund}
+		TU Dortmund}
 \date{}
 \usepackage{graphicx}
 \begin{document}
@@ -133,9 +133,22 @@ gegeben.
 In diesem Versuchsteil sollen mit einem Funktionengenerator erstellte Funktionen mit dem digitalen Speicheroszilloskop untersucht werden. Dafür wird das Signal direkt in das Oszilloskop gespeist. Die "Math"-Funktion führt dann für ein einstellbares Zeitintervall eine Fouriertransformation durch. Die ersten neun von Null verschiedenen Maxima sollen dann abgelesen werden, um diese mit den theoretischen, im Voraus berechneten, zu vergleichen.
 \subsection{Fourier-Synthese}
 
-In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle 1.
+In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Fourier-Komponenten zusammengesetzt werden. Dazu wird ein so genannter Oberwellengenerator verwendet. Dies ist ein Ger\"at, welches Sinusschwingungen mit festen Phasenbeziehungen und ganzzahligen Frequenzverh\"altnissen erzeugt. Zun\"achst werden dazu die Fourier-Keffizienten f\"ur die ersten 9 Oberwellen berechnet. Die Ergenisse finden sich in Tabelle 1. Dach werden die richtigen Phasenbeziehungen zwischen den Oberwellen und der Grundschwingung hergestellt. Dazu wird je eine Oberwelle auf Kanal 1 und die Grundschwingung auf den zweiten Kanal eines Oszilloskops gegeben. Auf dieses Weise kann mit Hilfe von Lissajous-Figuren die richtige Phasenbeziehung zwischen den Schwingungen hergestellt werden. Die negativen Koeffizienten der S\"agezahnfunktion werden dabei durch eine Phasenverschiebung von $180 ^\circ$ realisiert. 
 
+\noindent
+Die Amplitudenverh\"altnisse der einzelnen Komponenten sollen so gew\"ahlt werden, dass die Grundschwingung jeweils die gr\"o\ss te Amplitude des Oberwellengenerators ($0.6\,$V) aufweist. Dazu werden die Fourier-Koeffizienten entsprechend skaliert. Alle Einstellungen am Generator, die zur Synthese der einzelnen Funktionen n\"otig sind, befinden sich zusammengefasst in Tabelle 2. Nachdem der Oberwellengenerator entsprechend eingestellt wurde, kann die Summenschwingung auf dem Oszilloskop betrachtet werden.
 \section{Ergebnis}
+\subsection{Fourier-Analyse}
+\subsection{Fourier-Synthese} 
+\paragraph{Grundschwingung} Die Grundschwingung f\"ur alle betrachteten Funktionen ist eine Sinuswelle mit einer Ampltude von $0.6$V. Diese ist in Abbildung 4 dargestellt.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.8]{Screenshots/basic.png}
+\caption{Oszillogramm der Grundschwingung}
+
+\end{figure}
+\paragraph{Dreiecksfunktion}
+\paragraph{}
 
 \section{Diskussion}
 \section{Abbildungsverzeichnis}
@@ -151,7 +164,7 @@ In diesem Versuchsteil sollen die verschiedenen Schwingungsformen aus ihren Four
 \begin{tabular}{|c|c|c|c|}
 
 \hline
-n & Dreick [$a_n]$ & S\"agezahn [$b_n$] & Rechteck $[b_n]$ \\
+n & Dreieck [$a_n]$ & S\"agezahn [$b_n$] & Rechteck $[b_n]$ \\
 \hline
 1 & 0.405 & 0.637 & 1.273\\
 2 & 0.0 & -0.318 & 0.0\\
@@ -186,7 +199,7 @@ n & \multicolumn{2}{c||}{Dreiecksfunktion} & \multicolumn{2}{c||}{Sägezahnfunkt
 9 & 0.007 & 0 & 0.067 & 0 & 0.067 & 0\\
 \hline
 \end{tabular}
-\label{settings}
+\label{params}
 \caption{Einstellungen des Oberwellengenerators für die jeweiligen Schwingungen}
 \end{table}
 \begin{table}
